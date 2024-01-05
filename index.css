@@ -32,7 +32,6 @@ section {
 }
 
 .header {
-    border: 1px solid white;
     border-radius: 0px 0px 5px 5px;
     position: fixed;
     top: 0;
@@ -44,6 +43,10 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
 .logo {
@@ -111,7 +114,7 @@ span {
 }
 
 .home-content p {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 .social-media a {
@@ -174,7 +177,7 @@ span {
 }
 
 .about-content p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 2rem 0 3rem;
 }
 
@@ -288,6 +291,10 @@ span {
         border-radius: 50%;
     }
 
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
     .about {
         display: flex;
         flex-direction: column;
@@ -301,4 +308,42 @@ span {
     .about-content .heading {
         text-align: center;
     }
-  }
+    .about-content p {
+        font-size: 1.6rem;
+    }
+}
+
+/* nav menu responsiveness */
+@media only screen and (max-width: 800px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        margin-right: 0;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+}
