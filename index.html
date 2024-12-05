@@ -34,7 +34,7 @@
 
     <!-- home section design -->
     <section class="home" id="home">
-        <div class="home-content" data-aos="fade-right">
+        <div class="home-content" data-aos="fade-right" data-aos-delay="100">
             <h3>Hello, It's Me</h3>
             <h1>Aditya singh</h1>
             <h3>And I'm a <span>Computer Science Student</span></h3>
@@ -56,7 +56,7 @@
             <a href="Aditya_singh_CV.pdf" class="btn" download="">Download CV</a>
         </div>
 
-        <div class="home-img" data-aos="fade-left">
+        <div class="home-img" data-aos="fade-left" data-aos-delay="100">
             <img src="logo3.jpg" alt="">
         </div>
 
@@ -64,11 +64,11 @@
 
     <!-- about section -->
     <section class="about" id="about">
-        <div class="home-img" data-aos="fade-right">
+        <div class="home-img" data-aos="fade-right" data-aos-delay="100">
             <img src="logo3.jpg" alt="">
         </div>
 
-        <div class="about-content" data-aos="fade-left">
+        <div class="about-content" data-aos="fade-left" data-aos-delay="100">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Computer Science Student</h3>
             <p>I am a final-year BCA student at GVM's College, passionate about exploring the vast world of computer
@@ -88,7 +88,7 @@
         <h2 class="heading">My <span>Projects</span></h2>
 
         <div class="project-container">
-            <div class="project-box" data-aos="zoom-in">
+            <div class="project-box" data-aos="zoom-in" data-aos-delay="100">
                 <i class='bx bx-code-alt'></i>
                 <h3>Web Developement</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corrupti adipisci fuga labore,
@@ -97,7 +97,7 @@
                 <a href="#" class="btn">Read More</a>
             </div>
 
-            <div class="project-box" data-aos="zoom-in">
+            <div class="project-box" data-aos="zoom-in" data-aos-delay="100">
                 <i class='bx bxl-android'></i>
                 <h3>Android Developement</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corrupti adipisci fuga labore,
@@ -106,7 +106,7 @@
                 <a href="app_projects.html" class="btn">Read More</a>
             </div>
 
-            <div class="project-box" data-aos="zoom-in">
+            <div class="project-box" data-aos="zoom-in" data-aos-delay="100">
                 <i class='bx bxs-terminal'></i>
                 <h3>Command line Apps</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corrupti adipisci fuga labore,
@@ -122,7 +122,7 @@
         <h2 class="heading">Contact <span>me!</span></h2>
 
         <form action="">
-            <div class="input-box" data-aos="fade-in">
+            <div class="input-box" data-aos="fade-in" data-aos-delay="100">
                 <input type="text" placeholder="Full Name">
                 <input type="text" placeholder="Email Address">
             </div>
@@ -141,31 +141,7 @@
     <script src="test.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
-
-        // You can also pass an optional settings object
-        // below listed default settings
-        AOS.init({
-            // Global settings:
-            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-            initClassName: 'aos-init', // class applied after initialization
-            animatedClassName: 'aos-animate', // class applied on animation
-            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
-            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-            offset: 170, // offset (in px) from the original trigger point
-            delay: 50, // values from 0 to 3000, with step 50ms
-            duration: 600, // values from 0 to 3000, with step 50ms
-            easing: 'ease', // default easing for AOS animations
-            once: false, // whether animation should happen only once - while scrolling down
-            mirror: false, // whether elements should animate out while scrolling past them
-            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-        });
+      AOS.init();
     </script>
 </body>
 
