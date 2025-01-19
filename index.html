@@ -14,7 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
+<body id="my-background">
     <!-- header design -->
     <header class="header">
         <a href="" class="logo">Developer</a>
@@ -134,6 +134,18 @@
         </form>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+
+<script>
+    VANTA.NET({
+      el: "#home",
+      color: 0xff3f81, // Color of the net
+      backgroundColor: 0x23153c, // Background color
+      points: 10, // Number of points in the net
+      maxDistance: 20, // Maximum distance between points
+    });
+  </script>
     <script src="script.js"></script>
 </body>
 

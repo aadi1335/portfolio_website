@@ -185,6 +185,10 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.project {
+    background: var(--second-bg-color);
+}
+
 .project h2 {
     margin-bottom: 5rem;
 }
@@ -199,7 +203,7 @@ span {
 
 .project-container .project-box {
     flex: 1 1 30rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     padding: 3rem 2rem 3rem;
     text-align: center;
     border: 0.2rem solid var(--bg-color);
@@ -269,6 +273,11 @@ span {
 .contact form .btn {
     margin-top: 2rem;
     cursor: pointer;
+}
+
+.about,.project, .contact {
+    border-radius: 10px;
+    margin: 3px;
 }
 
 
