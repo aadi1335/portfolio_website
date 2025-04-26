@@ -11,12 +11,16 @@
 
     <!-- Boxicons Menu Icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
 
   <body id="my-background">
     <!-- Header -->
     <header class="header">
-      <a href="#" class="logo">Developer</a>
+      <a href="#" class="logo">SinghAditya</a>
       <i class="bx bx-menu" id="menu-icon"></i>
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
@@ -28,7 +32,7 @@
 
     <!-- Home Section -->
     <section class="home" id="home">
-      <div class="home-content">
+      <div class="home-content" data-aos="fade-up" data-aos-duration="4000">
         <h3>Hello, It's Me</h3>
         <h1>Aditya Singh</h1>
         <h3>And I'm a <span>Computer Science Student</span></h3>
@@ -51,16 +55,16 @@
         <a href="./assets/Aditya_singh_CV.pdf" class="btn">Download CV</a>
       </div>
       <div class="home-img">
-        <img src="./assets/logo3.jpg" alt="Aditya Singh Profile" />
+        <img src="./assets/logo3.jpg" alt="Aditya Singh Profile" data-aos="fade-up" data-aos-duration="4000" />
       </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
       <div class="home-img">
-        <img src="./assets/logo3.jpg" alt="Aditya Singh" />
+        <img src="./assets/logo3.jpg" alt="Aditya Singh" data-aos="fade-up" data-aos-duration="4000"/>
       </div>
-      <div class="about-content">
+      <div class="about-content" data-aos="fade-up" data-aos-duration="4000">
         <h2 class="heading">About <span>Me</span></h2>
         <h3>Computer Science Student</h3>
         <p>
@@ -81,7 +85,7 @@
     <!-- Project Section -->
     <section class="project" id="project">
       <h2 class="heading">My <span>Projects</span></h2>
-      <div class="project-container">
+      <div class="project-container" data-aos="fade-up" data-aos-duration="4000">
         <div class="project-box">
           <i class="bx bx-code-alt"></i>
           <h3>Web Development</h3>
@@ -89,7 +93,7 @@
             Explore projects that demonstrate my skills in web design and
             responsive development.
           </p>
-          <a href="#" class="btn">Read More</a>
+          <a href="WebProject.html" class="btn">Read More</a>
         </div>
         <div class="project-box">
           <i class="bx bxl-android"></i>
@@ -115,7 +119,7 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
-      <form action="#" method="POST">
+      <form action="#" method="POST" data-aos="fade-up" data-aos-duration="4000">
         <div class="input-box">
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email Address" required />
@@ -140,6 +144,9 @@
         points: 10,
         maxDistance: 20,
       });
+    </script>
+    <script>
+      AOS.init();
     </script>
     <script src="script.js"></script>
   </body>
