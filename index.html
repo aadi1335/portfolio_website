@@ -7,7 +7,9 @@
     <title>Aditya Singh - Portfolio Website</title>
 
     <!-- Linking CSS -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/Global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/Footer.css" />
 
     <!-- Boxicons Menu Icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -55,14 +57,14 @@
         <a href="./assets/Aditya_singh_CV.pdf" class="btn">Download CV</a>
       </div>
       <div class="home-img">
-        <img src="./assets/logo3.jpg" alt="Aditya Singh Profile" data-aos="fade-up" data-aos-duration="4000" />
+        <img src="./assets/logo1.jpg" alt="Aditya Singh Profile" data-aos="fade-up" data-aos-duration="4000" />
       </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
       <div class="home-img">
-        <img src="./assets/logo3.jpg" alt="Aditya Singh" data-aos="fade-up" data-aos-duration="4000"/>
+        <img src="./assets/logo1.jpg" alt="Aditya Singh" data-aos="fade-up" data-aos-duration="4000"/>
       </div>
       <div class="about-content" data-aos="fade-up" data-aos-duration="4000">
         <h2 class="heading">About <span>Me</span></h2>
@@ -88,21 +90,19 @@
       <div class="project-container" data-aos="fade-up" data-aos-duration="4000">
         <div class="project-box">
           <i class="bx bx-code-alt"></i>
-          <h3>Web Development</h3>
+          <h3>Backend Projects</h3>
           <p>
-            Explore projects that demonstrate my skills in web design and
-            responsive development.
+            Explore projects that demonstrate my skills in Backend intensive Projects.
           </p>
-          <a href="WebProject.html" class="btn">Read More</a>
+          <a href="BackendProject.html" class="btn">Read More</a>
         </div>
         <div class="project-box">
           <i class="bx bxl-android"></i>
-          <h3>Android Development</h3>
+          <h3>Frontend Development</h3>
           <p>
-            Projects showcasing my work in mobile app development for Android
-            devices.
+            Projects showcasing my work in Frontend web development and UI/UX.
           </p>
-          <a href="#" class="btn">Read More</a>
+          <a href="FrontendProject.html" class="btn">Read More</a>
         </div>
         <div class="project-box">
           <i class="bx bxs-terminal"></i>
@@ -111,7 +111,7 @@
             A collection of CLI tools and utilities built for efficiency and
             productivity.
           </p>
-          <a href="#" target="_blank" class="btn">Read More</a>
+          <a href="FullStackProjects.html" target="_blank" class="btn">Read More</a>
         </div>
       </div>
     </section>
@@ -133,14 +133,49 @@
       </form>
     </section>
 
+    <footer class="portfolio-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="./assets/file.svg" alt="Your Portfolio Logo" class="logo-img">
+          <p class="tagline">Creating digital experiences that matter</p>
+        </div>
+        
+        <div class="footer-links">  
+          <div class="links-column">
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="mailto:adityasunilsingh1335@gmail.com"><i class='bx bx-envelope'></i> Email</a></li>
+              <li><a href="https://www.linkedin.com/in/aditya-singh-b06158258/" target="_blank"><i class='bx bxl-linkedin-square'></i> LinkedIn</a></li>
+              <li><a href="https://github.com/aadi1335" target="_blank"><i class='bx bxl-github'></i> GitHub</a></li>
+              <li><a href="https://dribbble.com/yourprofile" target="_blank"><i class='bx bxl-dribbble'></i> Dribbble</a></li>
+            </ul>
+          </div>
+          
+          <div class="links-column">
+            <div class="count">
+              <span>Visitor Count: <span id="visitor-count">Loading...</span></span>
+            </div>
+            <div class="go-to-top">
+              <button><a href="#home">⬆️ Scroll-On-Top</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Aditya sigh. All rights reserved.</p>
+        <p class="credit">Designed & developed with ❤️ by Aditya Singh</p>
+      </div>
+    </footer>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
     <script>
       VANTA.NET({
         el: "#home",
-        color: 0xff3f81,
-        backgroundColor: 0x23153c,
+        color: 0x1cd8e6,
+        backgroundColor: 0x364053,
         points: 10,
         maxDistance: 20,
       });
@@ -148,6 +183,7 @@
     <script>
       AOS.init();
     </script>
-    <script src="script.js"></script>
+
+    <script src="./javascript/script.js"></script>
   </body>
 </html>
