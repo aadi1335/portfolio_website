@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/official_logo.ico" type="image/x-icon" />
-    <title>Aditya Singh - Portfolio Website</title>
+    <title>SinghAditya | Home</title>
 
     <!-- Linking CSS -->
     <link rel="stylesheet" href="./css/Global.css" />
@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
 
-  <body id="my-background">
+  <body id="my-background" onload="updateCounter()">
     <!-- Header -->
     <header class="header">
       <a href="#" class="logo">SinghAditya</a>
@@ -54,7 +54,7 @@
           ></a>
         </div>
         <!-- Placeholder for CV -->
-        <a href="./assets/Aditya_singh_CV.pdf" class="btn">Download CV</a>
+        <a href="./assets/Aditya_singh_CV_FSD.pdf" class="btn">Download CV</a>
       </div>
       <div class="home-img">
         <img src="./assets/logo1.jpg" alt="Aditya Singh Profile" data-aos="fade-up" data-aos-duration="4000" />
@@ -80,7 +80,7 @@
           connect and explore the endless possibilities within the realm of
           technology together! 🚀
         </p>
-        <a href="#" class="btn">Read more</a>
+        <a href="About.html" class="btn">Read more</a>
       </div>
     </section>
 
@@ -153,7 +153,7 @@
           
           <div class="links-column">
             <div class="count">
-              <span>Visitor Count: <span id="visitor-count">Loading...</span></span>
+              <span>Visitor Count: <span id="visitor-count">0</span></span>
             </div>
             <div class="go-to-top">
               <button><a href="#home">⬆️ Scroll-On-Top</a></button>
@@ -179,6 +179,7 @@
         points: 10,
         maxDistance: 20,
       });
+
     </script>
     <script>
       AOS.init();

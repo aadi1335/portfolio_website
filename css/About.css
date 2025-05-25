@@ -1,0 +1,183 @@
+/* About Me Section */
+.about-me {
+    padding: 10rem 9% 2rem;
+    background: var(--second-bg-color);
+    min-height: 100vh;
+}
+
+.about-me .heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.about-me .heading span {
+    color: var(--main-color);
+}
+
+.written-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 3rem;
+}
+
+.svg-img-loader {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-img-loader img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.svg-img-loader img:hover {
+    transform: scale(1.05);
+}
+
+.paragrapgh {
+    flex: 1;
+    min-width: 50%;
+}
+
+.about-me p {
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.about-me p span.highlight {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.below-para {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0, 255, 72, 0.2);
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.all-skills h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 3rem 0;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.8rem;
+    background-color: var(--bg-color);
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 255, 72, 0.3);
+}
+
+.skill-btn:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 72, 0.3);
+}
+
+.skill-btn i {
+    font-size: 1.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .written-content {
+        gap: 3rem;
+    }
+    
+    .svg-img-loader img {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        padding: 8rem 5% 4rem;
+    }
+    
+    .written-content {
+        flex-direction: column;
+    }
+    
+    .svg-img-loader {
+        min-width: 100%;
+        margin-bottom: 3rem;
+    }
+    
+    .svg-img-loader img {
+        max-width: 300px;
+    }
+    
+    .paragrapgh {
+        min-width: 100%;
+    }
+    
+    .about-me p,
+    .below-para {
+        font-size: 1.6rem;
+    }
+    
+    .all-skills h2 {
+        font-size: 3.5rem;
+    }
+    
+    .skill-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me .heading,
+    .all-skills h2 {
+        font-size: 3rem;
+    }
+    
+    .svg-img-loader img {
+        max-width: 250px;
+    }
+    
+    .btns {
+        gap: 1rem;
+    }
+    
+    .skill-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1.2rem;
+    }
+    
+    .skill-btn i {
+        font-size: 1.4rem;
+    }
+}

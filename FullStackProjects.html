@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/official_logo.ico" type="image/x-icon" />
-    <title>Aditya Singh - Projects</title>
+    <title>SinghAditya | Projects</title>
     <link rel="stylesheet" href="./css/Global.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/Footer.css" />
@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
 
-  <body>
+  <body onload="checkCounter()">
     <header class="header">
       <a href="index.html" class="logo">SinghAditya</a>
       <i class="bx bx-menu" id="menu-icon"></i>
@@ -31,7 +31,7 @@
       </nav>
     </header>
 
-    <section class="projects-page">
+    <section class="projects-page" id="project1">
       <div class="projects-header">
         <h2 class="heading">My <span>Projects</span></h2>
         <p class="subtitle">A collection of my recent work and contributions</p>
@@ -147,10 +147,10 @@
           
           <div class="links-column">
             <div class="count">
-              <span>Visitor Count: <span id="visitor-count">Loading...</span></span>
+              <span>Visitor Count: <span id="visitor-count">0</span></span>
             </div>
             <div class="go-to-top">
-              <button><a href="#home">⬆️ Scroll-On-Top</a></button>
+              <button><a href="#project1">⬆️ Scroll-On-Top</a></button>
             </div>
           </div>
         </div>
@@ -161,23 +161,6 @@
         <p class="credit">Designed & developed with ❤️ by Aditya Singh</p>
       </div>
     </footer>
-
-    <script>
-    const namespace = 'aadi1335';
-    const key = 'portfolio-site';
-
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-      .then(response => response.json())
-      .then(data => {
-        const counter = document.getElementById('visitor-count');
-        if (counter) {
-          counter.textContent = data.value;
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching visitor count:', error);
-      });
-  </script>
 
     <script src="./javascript/script.js"></script>
     <script>

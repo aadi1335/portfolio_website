@@ -32,17 +32,27 @@ window.onscroll = () => {
   header.classList.toggle("sticky", window.scrollY > 100);
 };
 
-const namespace = "aadi1335";
-const key = "portfolio-site";
+async function updateCounter() {
+  const url = "https://api.counterapi.dev/v1/aadi1335/homepage/up";
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+    document.getElementById("visitor-count").textContent = data.count;
+  } catch (error) {
+    console.error("Error fetching counter:", error);
+    document.getElementById("counter").textContent = "Error";
+  }
+}
 
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-  .then((response) => response.json())
-  .then((data) => {
-    const counter = document.getElementById("visitor-count");
-    if (counter) {
-      counter.textContent = data.value;
-    }
-  })
-  .catch((error) => {
-    console.error("Error fetching visitor count:", error);
-  });
+async function checkCounter() {
+  const url = "https://api.counterapi.dev/v1/aadi1335/homepage/";
+  try {
+const response = await fetch(url)
+    const data = await response.json();
+    document.getElementById("visitor-count").textContent = data.count;
+  }catch(err){
+    console.error("Error fetching counter:", err);
+    document.getElementById("counter").textContent = "Error";
+  }
+}
