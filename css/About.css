@@ -1,4 +1,4 @@
-/* About Me Section */
+/* About Me Section - Refined */
 .about-me {
     padding: 10rem 9% 2rem;
     background: var(--second-bg-color);
@@ -9,10 +9,21 @@
     text-align: center;
     font-size: 4rem;
     margin-bottom: 3rem;
+    position: relative;
 }
 
 .about-me .heading span {
     color: var(--main-color);
+}
+
+.about-me .heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--main-color);
+    margin: 1.5rem auto 0;
+    border-radius: 3px;
 }
 
 .written-content {
@@ -29,6 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .svg-img-loader img {
@@ -36,10 +48,8 @@
     max-width: 300px;
     height: auto;
     transition: transform 0.5s ease;
-}
-
-.svg-img-loader img:hover {
-    transform: scale(1.05);
+    position: relative;
+    z-index: 2;
 }
 
 .paragrapgh {
@@ -47,67 +57,72 @@
     min-width: 50%;
 }
 
-.about-me p {
-    font-size: 1.8rem;
-    text-align: justify;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1.5rem;
-}
-
-.about-me p span.highlight {
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.below-para {
-    padding: 2rem 0;
-    border-bottom: 1px solid rgba(0, 255, 72, 0.2);
-    margin-bottom: 3rem;
-    font-size: 1.8rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.all-skills h2 {
-    text-align: center;
-    font-size: 4rem;
-    margin: 3rem 0;
-}
-
-.btns {
+.education-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid var(--main-color);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 1.5rem;
-    flex-wrap: wrap;
-    max-width: 1200px;
+}
+
+.education-card:hover {
+    transform: translateX(10px);
+    background: rgba(0, 255, 72, 0.05);
+}
+
+.edu-icon {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-top: 0.3rem;
+}
+
+.edu-content h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 0.8rem;
+}
+
+.edu-content p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.professional-summary {
+    position: relative;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.skill-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem 1.8rem;
-    background-color: var(--bg-color);
-    color: #fff;
-    border-radius: 10px;
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 255, 72, 0.3);
-}
-
-.skill-btn:hover {
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 255, 72, 0.3);
-}
-
-.skill-btn i {
+.below-para {
+    padding: 3rem;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
     font-size: 1.8rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    border: 1px solid rgba(0, 255, 72, 0.1);
+    text-align: center;
+}
+
+.quote-icon {
+    color: var(--main-color);
+    opacity: 0.5;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+    margin-top: 1rem;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 1.6rem;
 }
 
 /* Responsive Design */
@@ -135,49 +150,190 @@
         margin-bottom: 3rem;
     }
     
-    .svg-img-loader img {
-        max-width: 300px;
+    .education-card {
+        padding: 1.8rem;
     }
     
-    .paragrapgh {
-        min-width: 100%;
-    }
-    
-    .about-me p,
     .below-para {
+        padding: 2rem;
         font-size: 1.6rem;
     }
-    
-    .all-skills h2 {
-        font-size: 3.5rem;
+}
+
+@media (max-width: 480px) {
+    .about-me .heading {
+        font-size: 3rem;
     }
     
-    .skill-btn {
-        padding: 0.8rem 1.5rem;
+    .education-card {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .edu-icon {
+        margin-bottom: 0.5rem;
+    }
+    
+    .below-para {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Skills Section */
+.skills-section {
+    padding: 5rem 9%;
+    background: var(--second-bg-color);
+    min-height: 100vh;
+    margin-top: 3px;
+}
+
+.skills-section .heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+}
+
+.skills-section .heading span {
+    color: var(--main-color);
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    margin-bottom: 4rem;
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    background: rgba(0, 255, 72, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 72, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: var(--main-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 72, 0.2);
+}
+
+.skill-item:hover i,
+.skill-item:hover span {
+    color: var(--bg-color);
+}
+
+.skill-item i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.skill-item span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 5rem 5%;
+    }
+    
+    .skill-category {
+        padding: 2rem;
+    }
+    
+    .skill-title {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1.2rem;
+    }
+    
+    .skill-item i {
+        font-size: 2.5rem;
+    }
+    
+    .skill-item span {
         font-size: 1.4rem;
     }
 }
 
 @media (max-width: 480px) {
-    .about-me .heading,
-    .all-skills h2 {
+    .skills-section .heading {
         font-size: 3rem;
+        margin-bottom: 3rem;
     }
     
-    .svg-img-loader img {
-        max-width: 250px;
+    .skill-category {
+        padding: 1.5rem;
     }
     
-    .btns {
+    .skill-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 1rem;
     }
     
-    .skill-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 1.2rem;
+    .skill-item {
+        padding: 1rem 0.5rem;
     }
     
-    .skill-btn i {
-        font-size: 1.4rem;
+    .skill-item i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-item span {
+        font-size: 1.2rem;
     }
 }
