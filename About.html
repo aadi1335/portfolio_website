@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Aditya Singh</title>
+  <link rel="shortcut icon" href="./assets/hashtag.png" type="image/x-icon" />
   <meta name="description" content="Learn more about Aditya Singh, an MCA student passionate about building web applications and learning new technologies.">
   <meta name="author" content="Aditya Singh">
   <meta name="keywords" content="Aditya Singh, Web Developer, MCA, HTML, CSS, JavaScript, MongoDB, React, Express.js">
@@ -22,6 +23,10 @@
 
   <!-- Icons 2 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 
 <body onload="checkCounter()">
@@ -41,11 +46,11 @@
   <section class="about-me" id="about">
     <h2 class="heading">About <span>Me</span></h2>
     <div class="written-content">
-      <div class="svg-img-loader">
+      <div class="svg-img-loader" data-aos="fade-up" data-aos-duration="4000">
         <img src="./assets/file.svg" alt="Loader">
       </div>
 
-      <div class="paragrapgh">
+      <div class="paragrapgh" data-aos="fade-up" data-aos-duration="4000">
         <p class="right-para-1">I hold a Bachelor’s degree from GVM’s College, Ponda-Goa, where I graduated with an
           impressive CGPA of 9.01
           in my final semester, reflecting my strong academic foundation and dedication to learning. To further enhance
@@ -74,7 +79,7 @@
 
     <div class="all-skills">
       <h2 class="heading">My <span>Skills</span></h2>
-      <div class="btns">
+      <div class="btns" data-aos="fade-up" data-aos-duration="4000">
         <span class="btn skill-btn"><i class="fab fa-java"></i> Java</span>
         <span class="btn skill-btn"><i class="fab fa-python"></i> Python</span>
         <span class="btn skill-btn"><i class="fas fa-code"></i> C/C++/C#</span>
@@ -134,7 +139,9 @@
     </div>
   </footer>
 
+  <script>AOS.init();</script>
   <script src="./javascript/script.js"></script>
+  <script type="module" src="./javascript/dbHandler.js"></script>
 </body>
 
 </html>

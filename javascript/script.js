@@ -32,27 +32,27 @@ window.onscroll = () => {
   header.classList.toggle("sticky", window.scrollY > 100);
 };
 
-async function updateCounter() {
-  const url = "https://api.counterapi.dev/v1/aadi1335/homepage/up";
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    document.getElementById("visitor-count").textContent = data.count;
-  } catch (error) {
-    console.error("Error fetching counter:", error);
-    document.getElementById("counter").textContent = "Error";
-  }
-}
+// async function updateCounter() {
+//   const url = "https://api.counterapi.dev/v1/aadi1335/homepage/up";
+//   try {
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     console.log(data);
+//     document.getElementById("visitor-count").textContent = data.count;
+//   } catch (error) {
+//     console.error("Error fetching counter:", error);
+//     document.getElementById("counter").textContent = "Error";
+//   }
+// }
 
-async function checkCounter() {
-  const url = "https://api.counterapi.dev/v1/aadi1335/homepage/";
-  try {
-const response = await fetch(url)
-    const data = await response.json();
-    document.getElementById("visitor-count").textContent = data.count;
-  }catch(err){
-    console.error("Error fetching counter:", err);
-    document.getElementById("counter").textContent = "Error";
-  }
-}
+// async function checkCounter() {
+//   const url = "https://api.counterapi.dev/v1/aadi1335/homepage/";
+//   try {
+// const response = await fetch(url)
+//     const data = await response.json();
+//     document.getElementById("visitor-count").textContent = data.count;
+//   }catch(err){
+//     console.error("Error fetching counter:", err);
+//     document.getElementById("counter").textContent = "Error";
+//   }
+// }
