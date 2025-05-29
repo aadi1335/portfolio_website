@@ -33,30 +33,30 @@ try {
 }
 
 
-// window.addEventListener('load', () => {
-//     const countRef = ref(fireDb, 'visitor');
+window.addEventListener('load', () => {
+    const countRef = ref(fireDb, 'visitor');
 
-//     onValue(countRef, (snapshot) => {
-//         let count = snapshot.val()?.count || 0;
+    onValue(countRef, (snapshot) => {
+        let count = snapshot.val()?.count || 0;
 
-//         if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
-//             // Increment only if it's the index/home page
-//             count++;
+        if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+            // Increment only if it's the index/home page
+            count++;
 
-//             set(countRef, { count })
-//                 .then(() => {
-//                     console.log('Visitor count updated:', count);
-//                     document.getElementById("visitor-count").textContent = count;
-//                 })
-//                 .catch((error) => {
-//                     console.error('Error updating count:', error);
-//                 });
-//         } else {
-//             // On any other page, just display the count
-//             document.getElementById("visitor-count").textContent = count;
-//             console.log('Current visitor count:', count);
-//         }
-//     }, {
-//         onlyOnce: true
-//     });
-// });
+            set(countRef, { count })
+                .then(() => {
+                    console.log('Visitor count updated:', count);
+                    document.getElementById("visitor-count").textContent = count;
+                })
+                .catch((error) => {
+                    console.error('Error updating count:', error);
+                });
+        } else {
+            // On any other page, just display the count
+            document.getElementById("visitor-count").textContent = count;
+            console.log('Current visitor count:', count);
+        }
+    }, {
+        onlyOnce: true
+    });
+});
