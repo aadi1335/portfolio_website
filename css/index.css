@@ -51,12 +51,14 @@
 .home-img img {
     width: 24vw;
     height: 24vw;
-    padding: 2rem;
+    padding: 1rem;
     background-size: cover;
+    object-fit: contain;
     background-attachment: fixed;
     border-radius: 50%;
     margin-top: 0;
-    transition: all 0.6s ease;
+    transition: 0.6s all ease;
+    background-color: white;
 }
 
 .home-img img:hover {
@@ -86,6 +88,7 @@ span {
 
 .home-content p {
     font-size: 2rem;
+    text-align: justify;
 }
 
 .social-media a {
@@ -150,6 +153,7 @@ span {
 .about-content p {
     font-size: 2rem;
     margin: 2rem 0 3rem;
+    text-align: justify;
 }
 
 .project {
